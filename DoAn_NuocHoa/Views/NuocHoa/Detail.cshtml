@@ -1,0 +1,25 @@
+﻿@model DoAn_NuocHoa.Models.SanPham
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<h2>@Html.DisplayFor(model => model.Ten)</h2>
+<div class="col-sm-12 col=md-12">
+    <div class="thumbnail">
+        <img src="@Html.DisplayFor(model=>model.Hinh)" alt="thumbnail">
+    </div>
+    <div class="caption">
+        <p>Mã loại: @Html.DisplayFor(model => model.Loai)</p>
+        <p>Mô tả: @Html.DisplayFor(model => model.MoTa)</p>
+        <p>Giá: @Html.DisplayFor(model => model.Gia)</p>
+        <p>Số lượng tồn: @Html.DisplayFor(model => model.SoLgTon)</p>
+        <p>
+            <a href="#" class="btn btn-primary" role="button">Buy</a>
+            @Html.ActionLink("Back", "Index", "", new { @class = "btn btn-info" })
+        </p>
+    </div>
+</div>
